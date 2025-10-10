@@ -1,0 +1,4 @@
+{
+    "python.defaultInterpreterPath": "/home/qchem/projects/gpaw_calculations/gpaw-venv/bin/python",
+"python.venvPath": "/home/qchem/projects/gpaw_calculations"
+}

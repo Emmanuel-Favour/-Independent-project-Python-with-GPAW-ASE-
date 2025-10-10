@@ -1,0 +1,304 @@
+
+  ___ ___ ___ _ _ _  
+ |   |   |_  | | | | 
+ | | | | | . | | | | 
+ |__ |  _|___|_____|  25.7.0
+ |___|_|             
+
+User:   qchem@IFEOLUWA
+Date:   Fri Oct  3 21:20:27 2025
+Arch:   x86_64
+Pid:    30012
+CWD:    /home/qchem/projects/gpaw_calculations
+Python: 3.12.3
+gpaw:   /home/qchem/gpaw-venv/lib/python3.12/site-packages/gpaw
+_gpaw:  /home/qchem/gpaw-venv/lib/python3.12/site-packages/
+        _gpaw.cpython-312-x86_64-linux-gnu.so
+ase:    /home/qchem/gpaw-venv/lib/python3.12/site-packages/ase (version 3.26.0)
+numpy:  /home/qchem/gpaw-venv/lib/python3.12/site-packages/numpy (version 2.3.3)
+scipy:  /home/qchem/gpaw-venv/lib/python3.12/site-packages/scipy (version 1.16.2)
+libxc:  5.2.3
+units:  Angstrom and eV
+cores: 4
+OpenMP: False
+OMP_NUM_THREADS: 1
+
+Input parameters:
+  kpts: [4 4 1]
+  mode: {ecut: 400.0,
+         name: pw}
+  occupations: {fixmagmom: False,
+                name: fermi-dirac,
+                width: 0.1}
+  spinpol: True
+  xc: PBE
+
+System changes: positions, numbers, cell, pbc, initial_charges, initial_magmoms 
+
+Initialize ...
+
+species:
+  Pd:
+    name: Palladium
+    id: c3f348c122b85aed3f99c4295cac773c
+    Z: 46.0
+    valence: 16
+    core: 30
+    charge: 0.0
+    file: /home/qchem/gpaw-venv/lib/python3.12/site-packages/gpaw_data/setups/Pd.PBE.gz
+    compensation charges: {type: gauss,
+                           rc: 0.38,
+                           lmax: 2}
+    cutoffs: {filter: 2.38,
+              core: 2.28}
+    projectors:
+      #              energy  rcut
+      - 5s(0.00)    -3.315   1.228
+      - 4p(6.00)   -51.209   1.360
+      - 5p(0.00)    -0.314   1.360
+      - 4d(10.00)    -4.047   1.228
+      -  s          23.896   1.228
+      -  d          23.165   1.228
+  
+    # Using partial waves for Pd as LCAO basis
+
+  O:
+    name: Oxygen
+    id: 32ecd46bf208036f09c70b0ec9a88b78
+    Z: 8.0
+    valence: 6
+    core: 2
+    charge: 0.0
+    file: /home/qchem/gpaw-venv/lib/python3.12/site-packages/gpaw_data/setups/O.PBE.gz
+    compensation charges: {type: gauss,
+                           rc: 0.21,
+                           lmax: 2}
+    cutoffs: {filter: 1.17,
+              core: 0.83}
+    projectors:
+      #              energy  rcut
+      - 2s(2.00)   -23.961   0.688
+      - 2p(4.00)    -9.029   0.598
+      -  s           3.251   0.688
+      -  p          18.182   0.598
+      -  d           0.000   0.619
+  
+    # Using partial waves for O as LCAO basis
+
+  H:
+    name: Hydrogen
+    id: d65de229564ff8ea4db303e23b6d1ecf
+    Z: 1.0
+    valence: 1
+    core: 0
+    charge: 0.0
+    file: /home/qchem/gpaw-venv/lib/python3.12/site-packages/gpaw_data/setups/H.PBE.gz
+    compensation charges: {type: gauss,
+                           rc: 0.15,
+                           lmax: 2}
+    cutoffs: {filter: 0.85,
+              core: 0.53}
+    projectors:
+      #              energy  rcut
+      - 1s(1.00)    -6.494   0.476
+      -  s          20.717   0.476
+      -  p           0.000   0.476
+  
+    # Using partial waves for H as LCAO basis
+
+Reference energy: -4942243.008314  # eV
+
+Spin-polarized calculation.
+Initial magnetic moment: 1.000000
+
+Convergence criteria:
+ Maximum [total energy] change in last 3 cyles: 0.0005 eV / valence electron
+ Maximum integral of absolute [dens]ity change: 0.0001 electrons / valence electron
+ Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+ Maximum number of scf [iter]ations: 333
+ (Square brackets indicate name in SCF output, whereas a 'c' in
+ the SCF output indicates the quantity has converged.)
+
+Symmetries present (total): 6
+
+  ( 1  0  0)  ( 1 -1  0)  ( 0  1  0)  ( 0 -1  0)  (-1  1  0)  (-1  0  0)
+  ( 0  1  0)  ( 0 -1  0)  ( 1  0  0)  ( 1 -1  0)  (-1  0  0)  (-1  1  0)
+  ( 0  0  1)  ( 0  0  1)  ( 0  0  1)  ( 0  0  1)  ( 0  0  1)  ( 0  0  1)
+Note: your k-points are not as symmetric as your crystal!
+
+16 k-points: 4 x 4 x 1 Monkhorst-Pack grid
+6 k-points in the irreducible part of the Brillouin zone
+       k-points in crystal coordinates                weights
+   0:     0.12500000   -0.12500000    0.00000000          2/16
+   1:     0.12500000    0.12500000    0.00000000          2/16
+   2:     0.37500000   -0.37500000    0.00000000          2/16
+   3:     0.37500000   -0.12500000    0.00000000          4/16
+   4:     0.37500000    0.12500000    0.00000000          4/16
+   5:     0.37500000    0.37500000    0.00000000          2/16
+
+Wave functions: Plane wave expansion
+  Cutoff energy: 400.000 eV
+  Number of coefficients (min, max): 28622, 28719
+  Pulay-stress correction: 0.000000 eV/Ang^3 (de/decut=0.000000)
+  Using Numpy's FFT
+  ScaLapack parameters: grid=1x1, blocksize=None
+  Wavefunction extrapolation:
+    Improved wavefunction reuse through dual PAW basis 
+
+Occupation numbers: Fermi-Dirac:
+  width: 0.1000  # eV
+ 
+
+Eigensolver
+   Davidson(niter=2) 
+
+Densities:
+  Coarse grid: 40*40*125 grid
+  Fine grid: 80*80*250 grid
+  Total Charge: 0.000000 
+
+Density mixing:
+  Method: difference
+  Backend: pulay
+  Linear mixing parameter: 0.05
+  old densities: 5
+  Damping of long wavelength oscillations: 50 
+
+Hamiltonian:
+  XC and Coulomb potentials evaluated on a 80*80*250 grid
+  Using the PBE Exchange-Correlation functional
+  External potential:
+    NoExternalPotential
+ 
+
+XC parameters: PBE with 2 nearest neighbor stencil
+
+Memory estimate:
+  Process memory now: 227.56 MiB
+  Calculator: 672.49 MiB
+    Density: 60.35 MiB
+      Arrays: 26.72 MiB
+      Localized functions: 22.86 MiB
+      Mixer: 10.77 MiB
+    Hamiltonian: 20.47 MiB
+      Arrays: 19.85 MiB
+      XC: 0.00 MiB
+      Poisson: 0.00 MiB
+      vbar: 0.62 MiB
+    Wavefunctions: 591.67 MiB
+      Arrays psit_nG: 466.72 MiB
+      Eigensolver: 98.12 MiB
+      Projections: 10.82 MiB
+      Projectors: 7.56 MiB
+      PW-descriptor: 8.45 MiB
+
+Total number of cores used: 4
+Parallelization over k-points: 2
+Domain decomposition: 1 x 1 x 2
+
+Number of atoms: 38
+Number of atomic orbitals: 437
+Number of bands in calculation: 355
+Number of valence electrons: 583
+Bands to converge: occupied
+
+... initialized
+
+Initializing position-dependent things.
+
+Density initialized from atomic densities
+Creating initial wave functions:
+  355 bands from LCAO basis set
+
+                                           
+                                           
+                                           
+                                           
+                                           
+                                           
+                Pd     Pd     Pd           
+       O                                   
+       H    Pd   PPd    PPd    Pd          
+       Pd     Pd    Pd                     
+             Pd    Pd     Pd               
+        Pd     Pd   PPd    Pd     Pd       
+                                           
+                Pd    Pd     Pd            
+           Pd    Pd     Pd                 
+                Pd     Pd     Pd           
+            Pd    Pd     Pd                
+       Pd     Pd    Pd                     
+                                           
+                                           
+                                           
+                                           
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Pd     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Pd     2.750645    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 Pd     5.501291    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 Pd     1.375323    2.382129   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Pd     4.125968    2.382129   10.000000    ( 0.0000,  0.0000,  0.0000)
+   5 Pd     6.876613    2.382129   10.000000    ( 0.0000,  0.0000,  0.0000)
+   6 Pd     2.750645    4.764258   10.000000    ( 0.0000,  0.0000,  0.0000)
+   7 Pd     5.501291    4.764258   10.000000    ( 0.0000,  0.0000,  0.0000)
+   8 Pd     8.251936    4.764258   10.000000    ( 0.0000,  0.0000,  0.0000)
+   9 Pd     1.375323    0.794043   12.245893    ( 0.0000,  0.0000,  0.0000)
+  10 Pd     4.125968    0.794043   12.245893    ( 0.0000,  0.0000,  0.0000)
+  11 Pd     6.876613    0.794043   12.245893    ( 0.0000,  0.0000,  0.0000)
+  12 Pd     2.750645    3.176172   12.245893    ( 0.0000,  0.0000,  0.0000)
+  13 Pd     5.501291    3.176172   12.245893    ( 0.0000,  0.0000,  0.0000)
+  14 Pd     8.251936    3.176172   12.245893    ( 0.0000,  0.0000,  0.0000)
+  15 Pd     4.125968    5.558300   12.245893    ( 0.0000,  0.0000,  0.0000)
+  16 Pd     6.876613    5.558300   12.245893    ( 0.0000,  0.0000,  0.0000)
+  17 Pd     9.627259    5.558300   12.245893    ( 0.0000,  0.0000,  0.0000)
+  18 Pd    -0.000000    1.588086   14.491785    ( 0.0000,  0.0000,  0.0000)
+  19 Pd     2.750645    1.588086   14.491785    ( 0.0000,  0.0000,  0.0000)
+  20 Pd     5.501291    1.588086   14.491785    ( 0.0000,  0.0000,  0.0000)
+  21 Pd     1.375323    3.970215   14.491785    ( 0.0000,  0.0000,  0.0000)
+  22 Pd     4.125968    3.970215   14.491785    ( 0.0000,  0.0000,  0.0000)
+  23 Pd     6.876613    3.970215   14.491785    ( 0.0000,  0.0000,  0.0000)
+  24 Pd     2.750645    6.352343   14.491785    ( 0.0000,  0.0000,  0.0000)
+  25 Pd     5.501291    6.352343   14.491785    ( 0.0000,  0.0000,  0.0000)
+  26 Pd     8.251936    6.352343   14.491785    ( 0.0000,  0.0000,  0.0000)
+  27 Pd     0.000000    0.000000   16.737678    ( 0.0000,  0.0000,  0.0000)
+  28 Pd     2.750645    0.000000   16.737678    ( 0.0000,  0.0000,  0.0000)
+  29 Pd     5.501291    0.000000   16.737678    ( 0.0000,  0.0000,  0.0000)
+  30 Pd     1.375323    2.382129   16.737678    ( 0.0000,  0.0000,  0.0000)
+  31 Pd     4.125968    2.382129   16.737678    ( 0.0000,  0.0000,  0.0000)
+  32 Pd     6.876613    2.382129   16.737678    ( 0.0000,  0.0000,  0.0000)
+  33 Pd     2.750645    4.764258   16.737678    ( 0.0000,  0.0000,  0.0000)
+  34 Pd     5.501291    4.764258   16.737678    ( 0.0000,  0.0000,  0.0000)
+  35 Pd     8.251936    4.764258   16.737678    ( 0.0000,  0.0000,  0.0000)
+  36 O      0.000000    0.000000   18.237678    ( 0.0000,  0.0000,  0.5000)
+  37 H      0.000000    0.000000   17.258608    ( 0.0000,  0.0000,  0.5000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    8.251936    0.000000    0.000000    40     0.1787
+  2. axis:    yes    4.125968    7.146386    0.000000    40     0.1787
+  3. axis:    no     0.000000    0.000000   26.737678   125     0.2139
+
+  Lengths:   8.251936   8.251936  26.737678
+  Angles:   90.000000  90.000000  60.000000
+
+Effective grid spacing dv^(1/3) = 0.1990
+
+     iter     time        total  log10-change:  magmom
+                         energy   eigst   dens
+iter:   1 21:43:43  -108.830405                   +0.9989
+iter:   2 22:01:47   -99.016168   -0.87  -1.21    +0.3367
+iter:   3 22:15:37  -122.127558   -0.91  -1.25    +0.1044
+iter:   4 22:32:21   -87.540458   -1.14  -1.19    +0.0339
+iter:   5 22:47:39   -77.576457   -1.15  -1.34    +0.0395
+iter:   6 23:00:28   -73.593784   -2.07  -1.51    +0.0273
+iter:   7 23:14:38   -69.580251   -1.61  -1.54    +0.0026
+iter:   8 23:30:26   -78.730496   -1.22  -1.73    -0.0905
+iter:   9 23:44:35   -92.352913   -1.92  -1.62    +0.0039
+iter:  10 23:59:24  -221.437090   +0.70  -1.46    +4.7780
+iter:  11 00:13:00   -63.779882   -1.33  -1.40    +0.6924
+iter:  12 00:28:28   -67.502490   -0.95  -1.58    +0.3511
+iter:  13 00:42:14   -62.118192   -1.95  -1.72    +0.4368
+iter:  14 08:20:11   -92.029531   +0.48  -1.77    -1.1146
