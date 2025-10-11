@@ -23,6 +23,7 @@ The ASE Python library was used for model construction, geometry optimization, a
     * Vacuum spacing: 10 Å to eliminate slab–slab interactions.
     * The bottom three atomic layers were fixed during geometry optimization using FixAtoms to simulate bulk-like behavior, while the top layer was fully relaxed.
  * Exchange–Correlation and Basis
+   
 | Parameter                       | Setting                                                |
 | ------------------------------- | ------------------------------------------------------ |
 | Exchange–Correlation Functional | PBE                                                    |
@@ -33,6 +34,7 @@ The ASE Python library was used for model construction, geometry optimization, a
 | Mixer                           | `MixerDif(beta=0.05, nmaxold=10, weight=100.0)`        |
 
 * Optimization Parameters
+  
 | Parameter                       | Setting                                                |
 | ------------------------------- | ------------------------------------------------------ |
 | Exchange–Correlation Functional | PBE                                                    |
@@ -43,6 +45,7 @@ The ASE Python library was used for model construction, geometry optimization, a
 | Mixer                           | `MixerDif(beta=0.05, nmaxold=10, weight=100.0)`        |
 
 * Energy Calculations
+  
 | System         | Total Energy (eV) |
 | -------------- | ----------------- |
 | Pd slab        | -95.7328          |
@@ -99,6 +102,5 @@ This insight contributes to understanding catalytic activity trends on Pd surfac
 | Convergence Threshold | fmax = 0.1 eV/Å  |
 
 ### Citation / Reference
-If you use this workflow, please cite:
 J. Enkovaara et al., J. Phys.: Condens. Matter 22, 253202 (2010) — GPAW
 A. Hjorth Larsen et al., J. Phys.: Condens. Matter 29, 273002 (2017) — ASE
