@@ -60,7 +60,8 @@ The binding energy of OH on Pd(111) was evaluated using:
 This negative value indicates stable and exothermic adsorption, confirming that OH strongly binds to the Pd(111) surface.
 
 
-<img width="1309" height="786" alt="image" src="https://github.com/user-attachments/assets/b94ee7e2-e2d4-4e3a-83c3-c975e2c0227b" />
+<img width="1309" height="785" alt="image (2)" src="https://github.com/user-attachments/assets/c0332994-ed67-43ea-869c-dab9eff53647" />
+
 
 *The image visualizes the optimized adsorption configuration of OH on the Pd(111) surface, confirming that the molecule preferentially binds at the atop site with an adsorption energy of –1.02 eV. This interaction alters the local electron distribution of surface Pd atoms, which is a key factor in determining Pd’s catalytic behavior in reactions such as oxygen reduction and hydrogen evolution.*
 
